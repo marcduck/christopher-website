@@ -18,22 +18,68 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Christopher's Construction
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/christopher-website" # the subpath of your site, e.g. /blog
-url: "https://marcduck.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+title: "Christopher's Construction"
+email: info@christophersconstruction.com
+description: "Professional construction services in Ontario. Specializing in residential and commercial construction, renovations, and custom builds."
+baseurl: "/christopher-website"
+url: "https://marcduck.github.io"
+# Remove twitter if not needed
+# twitter_username: jekyllrb
 github_username:  marcduck
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.26.2" 
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Author
+author:
+  name: "Christopher Trudelle"
+  avatar: "/assets/images/raze-solar-Scaj0T40nFI-unsplash (Large).jpg"
+  bio: "Professional contractor with 5 years of experience in construction"
+  location: "Toronto, Ontario"
+
+# Site Footer
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:info@christophersconstruction.com"
+
+# Defaults for pages
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      sidebar: false
+  # Add this section for the homepage
+  - scope:
+      path: "_pages/index.md"
+    values:
+      layout: splash
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      sidebar: false
+
+# Additional plugins
 plugins:
   - jekyll-feed
-  - jekyll-include-cache 
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -54,3 +100,13 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Theme settings
+search: true
+
+# Site Settings
+locale: "en-US"
+subtitle: "Quality Construction Services"
+name: "Christopher [LastName]"
+logo: "/assets/images/chris-logo.png"
+masthead_title: " "  # Blank to use logo only in header

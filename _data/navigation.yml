@@ -1,0 +1,9 @@
+main:
+  - title: "Services"
+    url: /services/
+  - title: "Gallery"
+    url: /gallery/
+  - title: "Testimonials"
+    url: /testimonials/
+  - title: "Contact"
+    url: /contact/ 
